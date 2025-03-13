@@ -97,7 +97,6 @@ class DockerAudio(DockerInterface, CoreSysAttributes):
             detach=True,
             cap_add=self.capabilities,
             security_opt=self.security_opt,
-            ulimits=self.ulimits,
             cpu_rt_runtime=self.cpu_rt_runtime,
             device_cgroup_rules=self.cgroups_rules,
             environment={
