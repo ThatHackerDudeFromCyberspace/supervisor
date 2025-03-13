@@ -215,8 +215,9 @@ class DockerAPI:
             # default timeout to make sure CoreDNS fallback is working
             # on first query.
             kwargs["dns_opt"] = ["timeout:10"]
-            if hostname:
-                kwargs["domainname"] = DNS_SUFFIX
+            # Breaks in LXC
+            #if hostname:
+            #    kwargs["domainname"] = DNS_SUFFIX
 
         # Setup network
         if not network_mode:
